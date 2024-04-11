@@ -231,7 +231,7 @@ nav .nav-links a.active {
   .scroller {
     max-width: 800px;
     overflow: hidden;
-    margin: 100px auto;
+    margin: 50px auto 0;
     mask: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
   }
 
@@ -240,7 +240,7 @@ nav .nav-links a.active {
     display: flex;
     flex-wrap: nowrap;
     gap: 1rem;
-    animation: scroller linear infinite 40s;
+    animation: scroller linear infinite 30s;
   }
 
   .scroller-logo {
@@ -268,6 +268,7 @@ nav .nav-links a.active {
 /* start projects section */
 #projects {
   padding-block: 3rem;
+  background-color: #f3f3f2;
 
   .cards {
     --gap: 1.5rem;
@@ -281,7 +282,8 @@ nav .nav-links a.active {
 
       border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.1);
+
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     }
   }
 
@@ -328,6 +330,14 @@ nav .nav-links a.active {
       font-size: 1.65rem;
       font-weight: 300;
       line-height: 1.5;
+    }
+
+    .email {
+      color: var(--main-clr);
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     .bi-whatsapp {
@@ -432,6 +442,10 @@ footer {
         font-size: 1.25rem;
       }
     }
+  }
+
+  footer {
+    font-size: 13px;
   }
 }
 

@@ -6,6 +6,10 @@
   --transition: all 0.4s ease-in;
 }
 
+html {
+  scroll-padding: 60px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -88,6 +92,7 @@ nav {
 
   .main-logo {
     display: none;
+    font-weight: 700;
     border-bottom: 1px solid transparent;
   }
 
@@ -240,7 +245,7 @@ nav .nav-links a.active {
     display: flex;
     flex-wrap: nowrap;
     gap: 1rem;
-    animation: scroller linear infinite 30s;
+    animation: scroller linear infinite 25s;
   }
 
   .scroller-logo {
@@ -284,6 +289,17 @@ nav .nav-links a.active {
       overflow: hidden;
 
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+
+      .info-links {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+
+        & a:hover {
+          color: var(--main-clr);
+          text-decoration: underline;
+        }
+      }
     }
   }
 
@@ -294,6 +310,17 @@ nav .nav-links a.active {
   .description {
     font-size: 13px;
     margin-block: 12px;
+  }
+
+  .see-more {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    color: var(--main-clr);
+
+    & a:hover {
+      text-decoration: underline;
+    }
   }
 }
 /* end of projects section */

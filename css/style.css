@@ -8,6 +8,7 @@
 
 html {
   scroll-padding: 60px;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -41,11 +42,11 @@ h3 {
   text-align: center;
   text-transform: capitalize;
   font-size: 2.25rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 section {
-  padding-block: 3rem;
+  padding: 5rem 0 2rem;
 }
 
 .overlay {
@@ -245,7 +246,7 @@ nav .nav-links a.active {
     display: flex;
     flex-wrap: nowrap;
     gap: 1rem;
-    animation: scroller linear infinite 25s;
+    animation: scroller linear infinite 20s;
   }
 
   .scroller-logo {
@@ -378,7 +379,12 @@ nav .nav-links a.active {
 footer {
   border-top: 1px solid var(--main-clr);
   text-align: center;
-  padding-block: 1.5rem;
+  padding-block: 3rem;
+
+  .social-icons {
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
 }
 
 @media (max-width: 770px) {

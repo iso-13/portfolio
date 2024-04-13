@@ -5,6 +5,7 @@ const overlayElm = document.querySelector(".overlay");
 const scrollersElms = document.querySelectorAll(".scroller-logo");
 const navLinks = document.querySelectorAll(".nav-link");
 const sections = document.querySelectorAll("section");
+const modeBtnElm = document.querySelector(".mode-btn");
 
 function addAnimation() {
   const innerScroller = document.querySelector(".inner-scroller");
@@ -64,3 +65,30 @@ function updateActiveClass() {
 updateActiveClass();
 
 window.addEventListener("scroll", updateActiveClass);
+
+// mode theme
+if (localStorage.getItem("theme")) {
+  localStorage.getItem("theme") == "dark" ? setDark() : setLight();
+} else {
+  window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? setDark()
+    : setLight();
+}
+
+modeBtnElm.addEventListener("click", function () {
+  localStorage.getItem("theme") == "dark" ? setLight() : setDark();
+});
+
+function setDark() {
+  document.documentElement.classList.remove("light-mode");
+  document.documentElement.classList.add("dark-mode");
+  localStorage.setItem("theme", "dark");
+  modeBtnElm.classList.add("show-btn");
+}
+
+function setLight() {
+  document.documentElement.classList.remove("dark-mode");
+  document.documentElement.classList.add("light-mode");
+  localStorage.setItem("theme", "light");
+  modeBtnElm.classList.remove("show-btn");
+}

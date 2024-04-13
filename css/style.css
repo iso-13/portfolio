@@ -200,7 +200,7 @@ nav .nav-links a.active {
   margin-top: 60px;
 }
 
-.container {
+#home .container {
   height: 100%;
   display: flex;
   align-items: center;

@@ -333,6 +333,7 @@ nav .nav-links a.active {
       border-radius: 8px;
       overflow: hidden;
       box-shadow: var(--shadow-lg);
+      background-color: var(--gray-200);
 
       .info-links {
         display: flex;
@@ -423,15 +424,13 @@ footer {
   border-top: 1px solid var(--main-clr);
   text-align: center;
   padding-block: 3rem;
-
-  p {
-    margin-bottom: 1rem;
-  }
-
-  .social-icons {
-    justify-content: center;
-    margin-bottom: 2rem;
-  }
+}
+footer p {
+  margin-bottom: 1rem;
+}
+footer .social-icons {
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 @media (max-width: 770px) {
